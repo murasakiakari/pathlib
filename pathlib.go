@@ -17,7 +17,7 @@ func (path Path) Abs() Path {
 }
 
 func (path Path) Base() string {
-	return strings.ReplaceAll(filepath.Base(string(path)), "." + path.Ext(), "")
+	return strings.ReplaceAll(filepath.Base(string(path)), path.Ext(), "")
 }
 
 func (path Path) Dir() Path {
